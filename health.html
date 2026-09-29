@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitality | Health Awareness Hub</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #064e3b 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="bg-brand-600 text-white p-2.5 rounded-xl shadow-md shadow-brand-600/30">
+                        <i class="fa-solid fa-heart-pulse text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold tracking-tight text-slate-900">Vital<span class="text-brand-600">Health</span></span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                    <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
+                    <a href="#lifestyle" class="hover:text-brand-600 transition-colors">Lifestyle</a>
+                    <a href="#food" class="hover:text-brand-600 transition-colors">Nutrition</a>
+                    <a href="#exercise" class="hover:text-brand-600 transition-colors">Fitness</a>
+                    <a href="#tips" class="hover:text-brand-600 transition-colors">Sleep & Water</a>
+                    <a href="#awareness" class="hover:text-brand-600 transition-colors">Awareness</a>
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-semibold shadow-md shadow-brand-600/20 transition-all hover:scale-105">Get in Touch</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-brand-600 focus:outline-none p-2" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Home</a>
+            <a href="#lifestyle" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Lifestyle</a>
+            <a href="#food" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Nutrition</a>
+            <a href="#exercise" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Fitness</a>
+            <a href="#tips" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Sleep & Water</a>
+            <a href="#awareness" class="block py-2 text-slate-700 hover:text-brand-600 font-medium">Awareness</a>
+            <a href="#contact" class="block mt-2 text-center bg-brand-600 text-white px-5 py-2.5 rounded-xl font-semibold">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative gradient-bg text-white py-24 lg:py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center gap-2 bg-brand-500/20 border border-brand-500/30 text-brand-300 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-sparkles"></i> Essential Health & Wellness Guide
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Transform Your Body, <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-200">Elevate Your Life</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0">
+                        Discover science-backed habits, nutritious meal strategies, workout regimes, and sleep hygiene designed for a healthier, vibrant lifestyle.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#lifestyle" class="bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/30 transition-all hover:scale-105 text-center">
+                            Explore Health Guide
+                        </a>
+                        <a href="#awareness" class="border border-slate-600 hover:border-slate-400 text-white font-medium px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center">
+                            Learn Awareness Tips
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 group">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Healthy lifestyle yoga and wellness" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/800x800/1e293b/ffffff?text=Healthy+Lifestyle'"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Healthy Lifestyle Section -->
+    <section id="lifestyle" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Pillars of a Healthy Lifestyle</h2>
+                <p class="mt-4 text-lg text-slate-600">Building sustainable daily habits is the foundation of long-term mental and physical well-being.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-emerald-100 text-brand-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Mindful Living</h3>
+                    <p class="text-slate-600 leading-relaxed">Practicing daily mindfulness reduces chronic stress, improves emotional resilience, and enhances focus throughout the day.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-person-running"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Daily Movement</h3>
+                    <p class="text-slate-600 leading-relaxed">Consistency over intensity. Incorporate active breaks, brisk walks, and stretching to keep joints healthy and metabolism active.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 card-hover">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Preventative Care</h3>
+                    <p class="text-slate-600 leading-relaxed">Regular medical checkups, early symptom detection, and healthy habits safeguard your body against chronic disease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Healthy Food Section -->
+    <section id="food" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Nutritional Balance</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-2">Fuel Your Body Right</h2>
+                <p class="mt-4 text-lg text-slate-600">Incorporate nutrient-dense superfoods into your routine for optimal energy and immunity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Food Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm card-hover flex flex-col">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop" 
+                             alt="Fresh organic salad" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/22c55e/ffffff?text=Organic+Salad'"/>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-brand-100 text-brand-800 text-xs font-bold px-3 py-1 rounded-full">Vitamins & Fiber</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">Leafy Greens & Veggies</h3>
+                            <p class="text-slate-600 text-sm">Rich in essential micronutrients, antioxidants, and dietary fiber that support healthy digestion and heart function.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm card-hover flex flex-col">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop" 
+                             alt="Balanced nutritious bowl" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/0ea5e9/ffffff?text=Lean+Proteins'"/>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full">Muscle Repair</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">Lean Proteins & Grains</h3>
+                            <p class="text-slate-600 text-sm">Quinoa, legumes, fish, and poultry provide sustained energy release and maintain lean muscle mass.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm card-hover flex flex-col">
+                    <div class="h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=800&auto=format&fit=crop" 
+                             alt="Fresh fruits bowl" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                             onerror="this.src='https://placehold.co/600x400/eab308/ffffff?text=Fresh+Fruits'"/>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">Antioxidants</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">Antioxidant Berries</h3>
+                            <p class="text-slate-600 text-sm">Blueberries, strawberries, and citrus shield cells against oxidative stress while satisfying natural sweet cravings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Exercise Section -->
+    <section id="exercise" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Active Living</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-2">Targeted Exercise Routines</h2>
+                <p class="mt-4 text-lg text-slate-600">Balance cardiovascular endurance, core strength, and flexibility training for complete fitness.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Exercise 1 -->
+                <div class="border border-slate-200 rounded-2xl p-6 bg-slate-50 hover:border-brand-500 transition-colors card-hover">
+                    <div class="h-48 rounded-xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" 
+                             alt="Strength training session" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/600x400/6366f1/ffffff?text=Strength+Training'"/>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">3-4 Days / Week</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Strength & Resistance</h3>
+                    <p class="text-slate-600 text-sm mb-4">Build muscle mass, improve bone density, and boost metabolic rate through compound movements.</p>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="border border-slate-200 rounded-2xl p-6 bg-slate-50 hover:border-brand-500 transition-colors card-hover">
+                    <div class="h-48 rounded-xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=800&auto=format&fit=crop" 
+                             alt="Cardio running exercise" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/600x400/f43f5e/ffffff?text=Cardio+Workouts'"/>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-rose-600">150 Mins / Week</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Cardiovascular Training</h3>
+                    <p class="text-slate-600 text-sm mb-4">Running, cycling, or swimming strengthens your heart, lowers blood pressure, and boosts lung endurance.</p>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="border border-slate-200 rounded-2xl p-6 bg-slate-50 hover:border-brand-500 transition-colors card-hover">
+                    <div class="h-48 rounded-xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop" 
+                             alt="Yoga and stretching" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Yoga+and+Flexibility'"/>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Daily Practice</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Flexibility & Mobility</h3>
+                    <p class="text-slate-600 text-sm mb-4">Yoga and dedicated mobility drills improve joint range of motion and prevent physical injuries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Sleep and Water Tips Section -->
+    <section id="tips" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-400 font-bold uppercase tracking-wider text-sm">Vital Recovery</span>
+                <h2 class="text-3xl font-extrabold sm:text-4xl mt-2">Sleep Hygiene & Hydration Tips</h2>
+                <p class="mt-4 text-slate-400">Quality rest and optimal fluid intake form the backbone of physical and mental performance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Water Tips Box -->
+                <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-sky-500/20 text-sky-400 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Hydration Rules</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                            <span><strong>Target 2.5–3.5 Liters Daily:</strong> Adjust based on activity level, body size, and local climate.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                            <span><strong>Morning Hydration:</strong> Drink 16 oz of fresh water immediately upon waking to kickstart digestion.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-sky-400 mt-1"></i>
+                            <span><strong>Electrolytes Matter:</strong> Add a pinch of sea salt or lemon during heavy workouts to retain essential mineral balance.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sleep Tips Box -->
+                <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Sleep Essentials</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
+                            <span><strong>7–9 Hours Rule:</strong> Consistent sleep schedules optimize brain function, cell repair, and hormone regulation.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
+                            <span><strong>No Screens 60 Mins Before Bed:</strong> Blue light suppresses natural melatonin synthesis needed for deep sleep.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
+                            <span><strong>Cool Environment:</strong> Maintain a room temperature around 65°F (18°C) for optimal rapid eye movement (REM) cycles.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Health Awareness Information -->
+    <section id="awareness" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Key Knowledge</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-2">Health Awareness Facts</h2>
+                <p class="mt-4 text-lg text-slate-600">Important statistics and insights to help you make informed decisions about your well-being.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+                    <div class="text-4xl font-extrabold text-brand-600 mb-2">80%</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Preventable Conditions</h4>
+                    <p class="text-slate-600 text-sm">Of premature heart disease cases can be prevented with regular exercise & nutrition.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+                    <div class="text-4xl font-extrabold text-brand-600 mb-2">30 Mins</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Daily Activity</h4>
+                    <p class="text-slate-600 text-sm">Sufficient to dramatically reduce cardiovascular risk factors and anxiety symptoms.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+                    <div class="text-4xl font-extrabold text-brand-600 mb-2">70%</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Water Weight</h4>
+                    <p class="text-slate-600 text-sm">Your muscles and brain are predominantly water. Hydration directly impacts cognitive speed.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+                    <div class="text-4xl font-extrabold text-brand-600 mb-2">1 in 3</div>
+                    <h4 class="font-bold text-slate-900 mb-1">Sleep Deprivation</h4>
+                    <p class="text-slate-600 text-sm">Adults do not get sufficient rest regularly, increasing risks of chronic fatigue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Get Connected</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-2">Have Questions? Reach Out to Us</h2>
+                    <p class="mt-4 text-slate-600">Send us a message for personalized wellness resources, feedback, or health consultation inquiries.</p>
+
+                    <div class="mt-8 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Email Us</h4>
+                                <p class="text-slate-600 text-sm">support@vitalhealthhub.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Call Us</h4>
+                                <p class="text-slate-600 text-sm">+1 (800) 555-VITAL</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Location</h4>
+                                <p class="text-slate-600 text-sm">100 Health Innovation Way, Suite 400</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-slate-700 mb-1">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-slate-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" required placeholder="How can we help you on your health journey?" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-xl shadow-md shadow-brand-600/20 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-4 bg-emerald-50 text-emerald-800 rounded-xl text-center text-sm font-semibold">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 VitalHealth Awareness Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const successMsg = document.getElementById('form-success');
+            const form = document.getElementById('contact-form');
+            successMsg.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
